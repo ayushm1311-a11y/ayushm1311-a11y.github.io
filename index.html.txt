@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy 6 Monthversary RASHHMALAIII ❤️</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#fff0f5;
+  text-align:center;
+  padding:20px;
+}
+
+h1,h2{ color:#c9184a; }
+
+.gallery img{
+  width:220px;
+  margin:10px;
+  border-radius:15px;
+}
+
+/* Memory boxes */
+.box{
+  background:white;
+  padding:20px;
+  margin:20px auto;
+  max-width:750px;
+  border-radius:15px;
+}
+
+/* Buttons */
+button{
+  padding:10px 20px;
+  background:#c9184a;
+  color:white;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+}
+
+/* Secret + answer hidden */
+#secret,#answer{ display:none; }
+
+input{
+  padding:8px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+/* Floating hearts */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: floatUp 8s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Sliding memory photos */
+.slide {
+  width:250px;
+  border-radius:15px;
+  animation: slide 3s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+  from { transform: translateX(-15px); }
+  to { transform: translateX(15px); }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Happy 6 Monthversary RASHHMALAIII ❤️</h1>
+<p>You are my favourite feeling.</p>
+
+<!-- MUSIC -->
+<audio controls autoplay loop>
+  <source src="song.mp3">
+</audio>
+
+<h2>Our Memories 📸</h2>
+<div class="gallery">
+  <img src="images/img1.jpg">
+  <img src="images/img2.jpg">
+  <img src="images/img3.jpg">
+  <img src="images/img4.jpg">
+  <img src="images/img5.jpg">
+  <img src="images/img6.jpg">
+</div>
+
+<div class="box">
+<h2>Our Memory Lane 🕊️</h2>
+
+<p><b>Month 1:</b> Our shy beginning 🤍</p>
+<img class="slide" src="images/m1.jpg"><br><br>
+
+<p><b>Month 2:</b> Late night talks 🌙</p>
+<img class="slide" src="images/m2.jpg"><br><br>
+
+<p><b>Month 3:</b> Falling deeper 💗</p>
+<img class="slide" src="images/m3.jpg"><br><br>
+
+<p><b>Month 4:</b> Choosing each other 🫶</p>
+<img class="slide" src="images/m4.jpg"><br><br>
+
+<p><b>Month 5:</b> Stronger together 🌸</p>
+<img class="slide" src="images/m5.jpg"><br><br>
+
+<p><b>Month 6:</b> Still my favourite ❤️</p>
+<img class="slide" src="images/m6.jpg">
+</div>
+
+<div class="box">
+<h2>My Letter To You 💌</h2>
+<p>
+RASHHMALAIII,<br><br>
+These six months have changed me.
+You became my peace, my home, my safe place.
+Loving you feels calm, natural, and right.
+I promise to keep choosing you —
+on good days and hard ones too.<br><br>
+Always yours.
+</p>
+</div>
+
+<!-- PASSWORD SECTION -->
+<div class="box">
+<h2>Secret Section 🔐</h2>
+<p>Enter the password</p>
+<input type="password" id="pass">
+<br><br>
+<button onclick="check()">Unlock</button>
+</div>
+
+<div id="secret" class="box">
+<h2>My Secret 🤍</h2>
+<p>
+No matter how life changes,
+no matter where we go,
+you will always be my person.
+My heart knows you.
+</p>
+</div>
+
+<div class="box">
+<h2>One Question For You 💍</h2>
+<p>Will you always be mine?</p>
+<button onclick="yes()">Yes 💖</button>
+<button onclick="no()">No 🙈</button>
+<p id="answer"></p>
+</div>
+
+<p style="margin-top:40px;">— POTATO 🖤</p>
+
+<script>
+function check(){
+  var p = document.getElementById("pass").value;
+  if(p==="1327"){
+    document.getElementById("secret").style.display="block";
+  } else {
+    alert("Wrong password 🤍");
+  }
+}
+
+function yes(){
+  document.getElementById("answer").style.display="block";
+  document.getElementById("answer").innerHTML =
+  "I knew it 💗 I’m yours, always.";
+}
+
+function no(){
+  document.getElementById("answer").style.display="block";
+  document.getElementById("answer").innerHTML =
+  "Too bad 😌 I already chose you forever.";
+}
+
+/* Floating hearts generator */
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerText = "💗";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 8000);
+}, 700);
+</script>
+
+</body>
+</html>
